@@ -7,7 +7,7 @@ import streamlit as st
 
 # Dataset
 # ⤷ Main dataset
-main_df = pd.read_csv("main_data.csv")
+main_df = pd.read_csv("dashboard/main_data.csv")
 # ⤷ Main dataset (copy)
 df = main_df.copy()
 df["dteday"] = pd.to_datetime(df["dteday"])
