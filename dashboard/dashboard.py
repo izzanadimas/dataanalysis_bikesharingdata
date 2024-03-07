@@ -13,7 +13,7 @@ df = main_df.copy()
 df["dteday"] = pd.to_datetime(df["dteday"])
 # ⤷ Helper table (temporary pivot table, etc.)
 #   ⤷ All time monthly recap
-monthly_alltime = df.resample(rule='ME', on='dteday').agg({
+monthly_alltime = df.resample(rule='M', on='dteday').agg({
     "casual": "sum",
     "yr": "mean",
     "registered": "sum",
